@@ -12,75 +12,31 @@ html {
 body {
     margin: 0;
     padding: 40px;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(218, 218, 218);
     font-family: "Roboto", sans-serif;
     font-size: 1.2rem;
     min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    color: aliceblue;
-    /* border: 1px solid blue; */
+    color: rgb(29, 27, 27);
 }
 
 .wrapper {
-    width: 800px;
-    /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    max-width: 600px;
+    font-size: 20px;
+    padding: 30px;
 }
 
-.task1 {
-    /* display: flex;
-    flex-direction: column;
-    gap: 20px; */
-    border: 2px solid gold;
-    width: 350px;
-    text-align: center;
-    padding: 10px 20px;
-}
-
-.outTask1, .outTask2 > span{
-    border-radius: 4px;
-    padding: 8px 16px;
-}
-
-.task2 {
-    /* display: flex;
-    flex-direction: column;
-    gap: 20px; */
-    border: 2px solid gold;
-    width: 350px;
-    text-align: center;
-    padding: 10px 20px;
-}
-
-input {
+.task1,
+.task2,
+.task3 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 2px;
+    padding: 15px;
+    margin-bottom: 25px;
     border-radius: 8px;
-    border: none;
-    font-size: 18px;
-    padding: 8px 16px;
 }
 
-.taskInput3 {
-    margin-top: 10px;
-}
 
-button {
-    background-color: #52a6d6;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 8px 16px;
-    margin: 25px;
-}
 
-button:active {
-    opacity: 0.8;
-}
