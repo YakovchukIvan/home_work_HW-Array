@@ -107,14 +107,28 @@ console.log(data[2].language);
 function tableStart() {
   for (let i = 0; i < data.length; i++) {
     let dataLanguage = data[i];
-    list__item.insertAdjacentHTML("beforeend", `
+
+    if (dataLanguage.popularity >= 2) {
+      list__item.insertAdjacentHTML("beforeend", `
       <li class="review">
         <p>${dataLanguage.language}</p>
         <div class="progress">
-          <div class="progress-done" data-done="${dataLanguage.popularity}"><span class="percent">${dataLanguage.popularity}</span></div>
+          <div class="progress-done" data-done="${dataLanguage.popularity}"><span class="percent">${dataLanguage.popularity} %</span></div>
         </div>
       </li>
     `);
+    } else if (dataLanguage.popularity < 2) {
+      list__item.insertAdjacentHTML("beforeend", `
+      <li class="review">
+        <p>${dataLanguage.language}</p>
+        <div class="progress">
+          <div class="progress-done progress2" data-done="${dataLanguage.popularity}"></div>
+          <span class="percent2">${dataLanguage.popularity} %</span>
+        </div>
+      </li>
+    `);
+    }
+    
   }
 
   startProgres();
@@ -124,7 +138,7 @@ function startProgres() {
   const progressDoneElements = document.querySelectorAll('.progress-done');
   progressDoneElements.forEach(progressDone => {
     const numProgress = progressDone.getAttribute('data-done');
-    progressDone.style.width = (numProgress * 10) + 'px';
+    progressDone.style.width = (numProgress * 20) + 'px';
   });
 }
 
